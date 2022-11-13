@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Name</span>
+    <input type="text"  onchange="textChanged()" onfocus="gotFocus(this)" onblur="focusLost()" onkeyup="keyUp()">
+
+    <div id="myDiv">
+
+    </div>
+
+    <script>
+        function textChanged(){
+           updateDiv("Change Event : ");
+        }
+
+        function gotFocus(evt){
+            updateDiv("Got Focus : "+event.type);
+        }
+
+        function focusLost(){
+            updateDiv("Lost Focus");
+        }
+
+        function keyUp(){
+           let div= document.getElementById("myDiv");
+           div.style.backgroundColor="rgb("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+")";
+           div.innerHTML="<p>key up event</p>";
+            
+        }
+
+
+        //------------------//
+        function updateDiv(text){
+            document.getElementById("myDiv").innerHTML=`<p>${text}</p>`
+        }
+    </script>
+</body>
+</html>

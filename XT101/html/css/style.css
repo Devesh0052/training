@@ -1,0 +1,14 @@
+
+            .container{
+                border: 5px solid red;
+                margin: 10px;
+                width: 100px;
+                height: 100px;
+                float: left;
+            }
+
+            .message {
+                color: blue;
+                padding: 20px;
+            }
+  

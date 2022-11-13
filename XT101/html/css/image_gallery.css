@@ -1,0 +1,32 @@
+div.gallery{
+    border:2px solid green;
+    width: 200px;
+    height: 300px;
+    
+}
+
+p{
+    text-align: center;
+}
+
+div.gallery img:hover{
+    border:2px solid rgb(146, 241, 146);
+}
+
+div.colors{
+    background: linear-gradient(to bottom, #ffa600, white,green);;
+    width: 200px;
+    height: 100px;
+   
+}
+
+div.imagebg{
+    background-image: url(img/laura-jones.jpg);
+    background-size: 100px;
+   background-origin: padding-box;
+    width: 200px;
+    height: 200px;
+  border: 2px solid;
+  padding: 30px;
+  color: pink;
+}

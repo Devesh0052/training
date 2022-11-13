@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .container{
+                display: grid;
+                gap:10px;
+               grid-template-columns:repeat(4,minmax(100px,1fr));
+                //grid-auto-flow: dense;
+            }
+
+            .box{
+                border: 1px solid slategray;
+            }
+
+            .box1{
+                border: 1px solid slategray;
+                width: 100px;
+                height: 350px;
+            }
+            .box2{
+                border: 1px solid slategray;
+                width: 100px;
+                height: 100px;
+            }
+
+            .four{
+                background-color: bisque;
+              // grid-row: 3/4;
+              // grid-column: 3/4;
+               
+               
+                
+            }
+            .one{
+              //grid-column: 1 / 2;
+                
+            }
+        </style>
+        <title>CSS:Grid</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box one">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                 Suscipit est itaque ipsam quod aperiam, nam eum assumenda laborum eius soluta qui, 
+                                 impedit tenetur dolorum ut vero. Voluptatibus minus eius blanditiis?</p>
+            </div>
+            <div class="box two">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Suscipit est itaque ipsam quod aperiam, nam eum assumenda laborum eius soluta qui, 
+                                impedit tenetur dolorum ut vero. Voluptatibus minus eius blanditiis?</p>
+            </div>
+            <div class="box three">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Suscipit est itaque ipsam quod aperiam, nam eum assumenda laborum eius soluta qui, 
+                                impedit tenetur dolorum ut vero. Voluptatibus minus eius blanditiis?</p>
+            </div>
+            <div class="box four">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Suscipit est itaque ipsam quod aperiam, nam eum assumenda laborum eius soluta qui, 
+                                impedit tenetur dolorum ut vero. Voluptatibus minus eius blanditiis?</p>
+            </div>
+            <div class="box five">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Suscipit est itaque ipsam quod aperiam, nam eum assumenda laborum eius soluta qui, 
+                                impedit tenetur dolorum ut vero. Voluptatibus minus eius blanditiis?</p>
+            </div>
+            <div class="box1 six">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Suscipit est itaque ipsam quod aperiam, nam eum assumenda laborum eius soluta qui, 
+                                impedit tenetur dolorum ut vero. Voluptatibus minus eius blanditiis?</p>
+            </div>
+            <div class="box2 six">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+    </body>
+</html>

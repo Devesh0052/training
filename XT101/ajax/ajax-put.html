@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AJAX-GET</title>
+    </head>
+    <body>
+        <form>
+            <label for="uid">ID</label><br>
+            <input type="text" id="uid"><br><br>
+            <label for="un">Name</label><br>
+            <input type="text" id="un"><br><br>
+            <label for="city">City</label><br>
+            <input type="text" id="city"><br><br>
+        </form>
+        
+        <button onclick="postRequest()">Make Request</button>
+        <br>
+        <br>
+        <h2 id="resp"></h2>
+
+        <script>
+            let xhr;
+            function postRequest() {
+                let data = collectData();
+                xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = processData;
+                xhr.open("PUT", "http://localhost:8080/api/rest/person/update", true);
+                xhr.setRequestHeader("Content-Type", "application/json");
+                xhr.send(data);
+            }
+
+
+            function processData() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    let response = xhr.responseText;
+                    console.log(response);
+                    document.getElementById("resp").innerHTML=response;
+                }
+            }
+
+            function collectData() {
+                let data = {
+                    id: parseInt(document.getElementById("uid").value),
+                    name: document.getElementById("un").value,
+                    city: document.getElementById("city").value
+                };
+                console.log(data);
+                return JSON.stringify(data);
+            }
+        </script>
+
+
+    </body>
+</html>

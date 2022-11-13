@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Main Page</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Best free learning for css and html">
+        <meta name="keywords" content="learning, html,CSS">
+        <meta name="auther" content="Sam smith">
+        <meta http-equiv="refresh" content="-1"> <!--no refresh for -1-->
+    </head>
+    <body>
+        <form action="/hello" autocomplete="off" novalidate>
+            <fieldset style="max-width: 500px;">
+                <legend>User Profile</legend>
+                <label for="un">User Name</label>
+                <input type="text" name="username" placeholder="Your Name ..." id="un" required><br>
+                <label for="pwd">Password</label>
+                <input type="password" name="password" placeholder="Your Password ..." id="pwd"><br>
+                <label for="loc">Location</label>
+                <input type="text" name="loc" placeholder="Location City ..." id="loc"><br>
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="email here ..." id="email" required><br>
+                <label for="mob">Mobile</label>
+                <input type="tel" name="email" placeholder="mobile No ..." id="mob" required pattern="9[0-9]{9}"><br>
+            </fieldset>
+            <fieldset style="max-width: 500px;">
+                <legend>Interested On</legend>
+                <input type="checkbox" name="news letter" id="c1">
+                <label for="c1">Newsletter</label><br>
+                <input type="checkbox" name="promotions" id="c2">
+                <label for="c2">Promotions</label><br>
+                <input type="checkbox" name="email" id="c3">
+                <label for="c3">email notifications</label><br>
+                <input type="checkbox" name="sms" id="c4">
+                <label for="c4">SMS</label><br>
+            </fieldset>
+            <fieldset style="max-width: 500px;">
+                <legend>Time Slot</legend>
+                <input type="radio" name="slot" id="r1" value="morning">
+                <label for="r1">Morning[8:00-11:00]</label><br>
+                <input type="radio" name="slot" id="r2" value="evening">
+                <label for="r2">Evening[17:00-20:00]</label><br>
+            </fieldset>
+                <input type="submit" value="Submit">
+           
+        </form>
+    </body>
+</html>

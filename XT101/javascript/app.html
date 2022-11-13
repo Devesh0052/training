@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        <script>
+            function f1() {
+                names = [
+                    "john",
+                    "peter",
+                    "Neel",
+                    "Shantanu",
+                    "Tanvir"
+                ];
+
+                let flag = false;
+                for (let n of names) {
+                    if (n === "Neel") {
+                        console.log("Welcome Neel");
+                        flag = true;
+                        break;
+                    }
+
+                }
+                document.write("Processing Done");
+
+                if (flag) {
+                    document.write("Neel found");
+                } else {
+                    document.write("Neel Not found");
+                }
+            }
+        </script>
+        <title>Document</title>
+    </head>
+    <body>
+        <button onclick="f1()">Find Neel</button>
+    </body>
+</html>

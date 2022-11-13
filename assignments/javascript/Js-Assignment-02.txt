@@ -1,0 +1,20 @@
+1. Given the following array of JavaScript Objects
+[
+{custId:1020,customerName:"Naveen Mitra",checkInDate}:"2022-02-28", stayDuration:5}
+{custId:1021,customerName:"Mukesh Anjani",checkInDate}:"2022-04-21", stayDuration:15}
+{custId:1022,customerName:"Rajit Kapoor",checkInDate}:"2022-03-21", stayDuration:10}
+{custId:1023,customerName:"Dilip Khanna",checkInDate}:"2022-03-19", stayDuration:5}
+{custId:1024,customerName:"Dharmendra Singh",checkInDate}:"2022-04-28", stayDuration:25}
+{custId:1025,customerName:"Puneet Issar",checkInDate}:"2022-04-20", stayDuration:12}
+{custId:1026,customerName:"Shankar Modi",checkInDate}:"2022-03-18", stayDuration:3}
+{custId:1027,customerName:"Veeral Pancholi",checkInDate}:"2022-04-28", stayDuration:23}
+]
+
+find the following:
+1. Customer details for longest stay duration.
+2. list customers stayed in the month of April
+3. Customer Details who stayed min no. of days
+4. List all the customers.
+5. Count how many customers stayed in March.
+
+6.(Optional) Print the details of how many customers stayed between 21 March and 20 April 

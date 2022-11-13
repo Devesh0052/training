@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        input:enabled{
+            background-color: yellow;
+        }
+        input:disabled{
+            background-color: slategray;
+        }
+
+        input:checked{
+            background-color: brown;
+        }
+        a:hover{
+            color: red;
+        }
+        /*Table */
+        table{
+            border-collapse: collapse;
+           border: 1px solid white;
+        width: 60%;
+        }
+        th{
+           border: 1px solid white;
+           background-color: darkblue;
+           color: white;
+           padding: 10px;
+        }
+        td{
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        tr:nth-child(odd){
+            background-color: lightgrey;
+        }
+        tr:nth-child(even){
+            background-color: lightcyan;
+
+        }
+       
+    </style>
+    <title>CSS: Pseudo Classes</title>
+</head>
+<body>
+    Name:<input type="text" name="t1" disabled><br>
+    Address:<input type="text" name="a1" ><br>
+    Notification: <input type="checkbox" checked ><br>
+    URL <a href="">Click Me</a>
+
+    <h1>Table</h1>
+    <table border="1px">
+        <tr><th>Name</th><th>City</th><th>Pin</th></tr>
+        <tr><td>Shantanu</td><td>Hyderabad</td><td>500098</td></tr>
+        <tr><td>Shantanu</td><td>Hyderabad</td><td>500098</td></tr>
+        <tr><td>Shantanu</td><td>Hyderabad</td><td>500098</td></tr>
+        <tr><td>Shantanu</td><td>Hyderabad</td><td>500098</td></tr>
+        <tr><td>Shantanu</td><td>Hyderabad</td><td>500098</td></tr>
+        <tr><td>Shantanu</td><td>Hyderabad</td><td>500098</td></tr>
+    </table>
+</body>
+</html>

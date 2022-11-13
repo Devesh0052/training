@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            p{
+                font-size: 20px;
+            }
+
+            #blue{
+                color: blue;
+            }
+
+            .common{
+                max-width: 80%;
+                height: 200px;
+                border: 2px solid black;
+            }
+
+            .container{
+                width: 800px;
+                height: 600px;
+                border: 2px solid blueviolet;
+
+            }
+
+            .container div{
+                width: 200px;
+                height: 150px;
+                margin: 20px;
+            }
+            #one{
+                border: 2px solid red;
+                float: left;
+            }
+
+            #two{
+                border: 2px solid green;
+                float: left;
+            }
+
+            #three1{
+                border: 2px solid yellowgreen;
+                float: left;
+            }
+            div[id^=three]{
+                border: 2px solid palevioletred;
+                float: left;
+            }
+        </style>
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>This is header tag</h1>
+        <p class="common">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas error ducimus quibusdam at voluptatem. 
+                                Sunt, aliquam sit debitis atque saepe,
+                                 optio reiciendis quis provident consequuntur repellat facere rerum? Inventore, voluptates?</p>
+        <p class="common" id="blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas error ducimus quibusdam at voluptatem. 
+                                    Sunt, aliquam sit debitis atque saepe,
+                                     optio reiciendis quis provident consequuntur repellat facere rerum? Inventore, voluptates?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas error ducimus quibusdam at voluptatem. 
+                                        Sunt, aliquam sit debitis atque saepe,
+                                         optio reiciendis quis provident consequuntur repellat facere rerum? Inventore, voluptates?</p>
+        <h1>This is header tag</h1>
+
+        <div class="container">
+            <div id="one">One</div>
+            <div  id="two">Two</div>
+            <div  id="three">Three</div>
+            <div  id="otherthree">Three</div>
+        </div>
+
+    </body>
+</html>

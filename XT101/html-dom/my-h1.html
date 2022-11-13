@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addH1(){
+          let  log=console.log;
+        let c=document.getElementById("container");
+        let h1=document.createElement("h1"); // <h1></h1>
+        h1.innerHTML="Hello"; //<h1>Hello</h1>
+        h1.style.color="green";
+        c.appendChild(h1); //<div><h1>Hello</h1></div>
+        c.addEventListener("click",()=>{
+            log("Div Element CLicked..");
+        });
+
+
+}
+
+    </script>
+</head>
+<body onload="addH1()">
+    <div id="container" >
+       
+    </div>
+    
+</body>
+</html>

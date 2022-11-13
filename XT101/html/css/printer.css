@@ -1,0 +1,30 @@
+.desktop{
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        box-sizing: border-box;
+        font-size: 16;
+    }
+    main{
+        float: left;
+        width: 90%;
+        padding: 20px;
+        margin: 20px;
+        color: darkblue;
+        text-align: justify;
+    }
+    h1{
+        color: brown;
+        text-align: center;
+        font-size: 24;
+    }
+    
+    .sidebar{
+        display: none;
+        float: left;
+        width: 20%;
+        height: 400px;
+        background: yellow;
+        border: 2px solid sandybrown;
+    
+    }

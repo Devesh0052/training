@@ -1,0 +1,25 @@
+1. What are the different ways to declare variables in JavaScript? provide some examples.
+
+2. Write for ..in and for ..of loop to print the numbers given below:
+
+let numbers=[100,101,200,300,400,500];
+
+3. define a function to print a given string as input,10 times using any of the loops.
+
+4. Define a self invocable function which adds 2 integers and print the value in console. Use proper validation for input data.
+
+5. define an anonymus function which concatenates 2 strings. Invoke the function to print the result.
+
+6. define closure and support it with an example.
+
+7. define a closure which adds 20 to any given number as input.
+
+8. following are some arrow functions:
+
+(a,b)=>a+b;
+(a,b)=>a*b;
+Write an appropriate function which receives the above arrow functions and print the result on console.
+
+9. define a function to calculate the factorial of any number as input. write proper validations if the number is 0 or -ve.
+
+10. define an array of 20 integers containing odd and even numbers. Define a function to calculate the sum of odd and even numbers.

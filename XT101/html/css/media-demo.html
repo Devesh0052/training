@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .desktop{
+            background: pink;
+        }
+
+        @media screen and (max-width:300px) {
+            .desktop{
+                background-color: rgb(228, 241, 191);
+            }
+        }
+        @media screen and (min-width:500px) {
+            .desktop{
+                background-color: lightgray;
+            }
+        }
+
+        @media screen and (min-width:700px) {
+            .desktop{
+                background-color: rgb(231, 176, 176);
+            }
+        }
+
+        @media screen and (min-width:1300px) {
+            .desktop{
+                background-color: olive;
+            }
+        }
+
+        @media print {
+            .desktop{
+                background-color: rgb(233, 42, 42);
+            }
+        }
+    </style>
+    <title>CSS: media query</title>
+</head>
+<body class="desktop">
+    <h1>Welcome to my Site</h1>
+</body>
+</html>

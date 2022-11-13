@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIST with DOM</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        input{
+            margin-left: 20px;
+        }
+        ul{
+            list-style-type: none;
+            display: block;
+            width: 30%;
+            
+            margin-left: 20px;
+           
+        }
+        li{
+            background-color: bisque;
+            margin-bottom: 2px;
+            padding: 5px;
+        }
+    </style>
+    <script>
+        function addFruitBottom(){
+            let fruitName=$("t1").value;
+            let list=document.getElementById("fruitsList");
+            let li_item=document.createElement("li");
+            li_item.innerHTML=fruitName; //<li>Grapes</li>
+            list.appendChild(li_item);
+
+        }
+
+        function addFruitTop(){
+            let fruitName=document.getElementById("t1").value;
+            let list=document.getElementById("fruitsList");
+            let li_item=document.createElement("li");
+            //li_item.style.backgroundColor="#"+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9)+""+Math.floor(Math.random()*9);
+            li_item.style.backgroundColor="rgb("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+")";
+            li_item.innerHTML=fruitName; //<li>Grapes</li>
+            list.insertBefore(li_item,list.children[0]);
+
+        }
+
+        function $(id){
+           return  document.getElementById(id);
+
+        }
+    </script>
+</head>
+<body>
+    <input type="text" value="" required id="t1">
+    <button onclick="addFruitTop()">Add Fruit At the Top</button>
+    <button onclick="addFruitBottom()">Add Fruit At the end</button>
+
+   <ul id="fruitsList">
+       <li>Apple</li>
+       <li>Orange</li>
+       <li>Mango</li>
+       <li>Guava</li>
+       <li>Banana</li>
+   </ul>
+</body>
+</html>

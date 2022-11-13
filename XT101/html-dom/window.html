@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function updateText(){
+          let headElement = document.getElementById("header1");
+          headElement.innerHTML="Hello There";
+        }
+
+        function updateText2(){
+          let headElement = document.getElementById("header1");
+          let textValue=document.getElementById("inputText").value;
+          headElement.innerHTML=textValue;
+        }
+
+        function addInputwithButton(){
+           let input = document.createElement("input"); //<input>
+
+           input.setAttribute("type","text"); //<input type="text">
+          input.setAttribute("value"," "); //<input type="text" value=" ">
+          input.setAttribute("id","inputText"); //<input type="text" value=" " id="inputText">
+          input.setAttribute("required",""); //<input type="text" value=" " id="inputText" required="true">
+
+          //input.classList.add("item","container");
+
+          let btn=document.createElement("button"); //<button></button>
+          btn.setAttribute("onclick","updateText2()"); //<button onclick="updateText2()"></button>
+          btn.innerHTML="Update";               ////<button onclick="updateText2()">Update</button>
+           
+           let body=document.getElementsByTagName("body")[0];
+           body.appendChild(input);
+           body.appendChild(btn);
+        }
+
+    </script>
+    <title>DOM Demo</title>
+</head>
+<body onload="addInputwithButton()">
+    <h1 id="header1">Hello</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ut, vitae cupiditate nisi reiciendis
+     dicta facilis officia amet exercitationem id ex in autem, minima at nobis doloribus est expedita placeat.</p>
+   
+     <button onclick="updateText()">update text</button><br>
+
+   
+</body>
+</html>

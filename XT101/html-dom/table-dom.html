@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Table with DOM</title>
+        <style>
+            table {
+                border-collapse: collapse;
+
+            }
+            table,
+            tr,
+            td {
+                border: 2px solid red;
+            }
+        </style>
+        <script>
+            function createTable() { // alert("Table creation in process");
+                let arr = [
+                    {
+                        id: 1,
+                        name: "Andrew",
+                        age: 30,
+                        salary: 45000
+                    },
+                    {
+                        id: 2,
+                        name: "Brandon",
+                        age: 25,
+                        salary: 75000
+                    },
+                    {
+                        id: 3,
+                        name: "Christina",
+                        age: 26,
+                        salary: 65000
+                    },
+                    {
+                        id: 4,
+                        name: "Elena",
+                        age: 28,
+                        salary: 35000
+                    }, {
+                        id: 5,
+                        name: "Felicia",
+                        age: 25,
+                        salary: 75000
+                    }
+                ]
+                if (document.getElementById("tab").childElementCount === 0) {
+
+                    let dataTable = document.createElement("table");
+
+                    for (let obj of arr) {
+                        let row = document.createElement("tr");
+                        
+                        let values = Object.values(obj);
+                        for (let val of values) {
+                            let td = document.createElement("td");
+                            td.innerHTML = val;
+                            row.appendChild(td);
+
+                        }
+                        
+                        //code to attache delete button
+                        let btn=document.createElement("button")
+                        btn.setAttribute("onclick","deleteRow(this)");
+                        btn.innerHTML="delete";
+                        let btn_data=document.createElement("td");
+                        btn_data.appendChild(btn);
+                        row.appendChild(btn_data);
+                        //End
+
+                        dataTable.appendChild(row);
+
+                    }
+
+                    document.getElementById("tab").appendChild(dataTable);
+                }
+
+
+            }
+
+            function deleteRow(btn){
+               // alert("Row Delete");
+               let row=btn.parentNode.parentNode;
+               //alert(btn_parent);
+               row.parentNode.removeChild(row);
+                
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="createTable()">Create table</button>
+        <div id="tab"></div>
+
+    </body>
+</html>

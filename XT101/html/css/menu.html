@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            .menu {
+                width: 75px;
+                height: 30px;
+                color: white;
+                background-color: rgb(5, 26, 48);
+                position: relative;
+                top: 30px;
+                left: 30px;
+            }
+
+            .items {
+                position: absolute;
+                top: 30px;
+                left: 0;
+                display: none;
+            }
+
+
+            .item {
+                width: 75px;
+                height: 30px;
+                background-color: rgb(227, 227, 230);
+                box-shadow: 2px 2px 2px darkgray;
+                color: slategrey;
+                margin: 5px;
+            }
+
+            .menu:hover .items {
+                display: block;
+               
+                
+            }
+
+            .list {
+                list-style-type: none;
+            }
+        </style>
+        <title>Menu</title>
+    </head>
+    <body>
+        <div class="menu">
+            <h4>Animal</h4>
+            <div class="items">
+                <ul class="list">
+                    <li class="item">
+                        <a href="#">Lion</a>
+                    </li>
+                    <li class="item">Tiger</li>
+                    <li class="item">Wolf</li>
+                    <li class="item">Leopard</li>
+                    <li class="item">Hyena</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

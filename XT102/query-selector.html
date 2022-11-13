@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background:url('Resize.jpg');
+            background-position: bottom;
+            background-size: cover;
+        
+           
+
+        }
+        .header{
+            color: blue;
+        }
+        .para{
+            color: red;
+        }
+
+        .demo{
+            color: olive;
+        }
+    </style>
+    <title>Query Selector Demo</title>
+</head>
+<body>
+    <!--
+    <h1>Hello</h1>
+    <h1 class="header">Good Morning</h1>
+    <h1 class="header">Good Eveneing</h1>
+    <p class="para">This is line 1</p>
+
+    <p class="para">This is line 2</p>
+
+    <p class="para">This is line 3</p>
+
+    <p class="demo">This is line 4</p>
+    -->
+    <script>
+        let headers=document.querySelectorAll('.header');
+       console.log(headers.length);
+       for(let h1 of headers){
+           h1.style.color="red";
+       }
+
+       let pelems=document.querySelectorAll('p');
+       
+       for(let p of pelems){
+           p.style.fontSize='34px';
+       }
+
+      
+    </script>
+</body>
+</html>

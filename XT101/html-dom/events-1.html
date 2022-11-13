@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <button onclick="sayHello()">Click Me</button>
+
+    <button id="btn">Click Me for Message</button>
+
+    <div id="myDiv">
+        
+    </div>
+    <div id="myDiv1" style="margin-left:20px ;margin-top: 20px;">
+        
+    </div>
+    <script>
+
+        function sayHello(){
+            alert("Hell there!");
+        }
+
+
+
+        let btn=document.getElementById("btn");
+        btn.addEventListener("click",(event)=>{
+            alert("Welcome to Event Handling"+event.clientX);
+        });
+        btn.addEventListener("mouseover",()=>{
+            document.getElementById("myDiv").innerHTML="<h3>Mouse Over Event</h3>";
+        });
+        btn.addEventListener("mouseout",()=>{
+            document.getElementById("myDiv").innerHTML="<h3>Mouse Out Event</h3>";
+           
+        });
+
+        btn.removeEventListener("mouseover",()=>{
+            document.getElementById("myDiv").innerHTML="<h3>Mouse Over Event</h3>";
+        });
+        
+
+        document.addEventListener("mousedown", (evt)=>{
+           let div= document.getElementById("myDiv1");
+           let leftMargin=evt.clientX;
+           let topMargin=evt.clientY;
+           div.style.marginLeft=leftMargin+"px";
+           div.style.marginTop=topMargin+"px";;
+          // div.innerHTML=`<p>${leftMargin},${topMargin}</p>`;
+          div.innerHTML=`<p>${evt.screenX},${evt.screenY}</p><p>${evt.clientX},${evt.clientY}</p>`;
+          
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX-GET</title>
+</head>
+<body>
+    <button onclick="makeRequest()">Make Request</button>
+
+
+    <div class="noshow" id="mydiv">
+        <h2 class="user-id" id="uid"></h3>
+        <h2 class="title" id="t1"></h2>
+        <p class="content" id="body"></p>
+    </div>
+    <script>
+       let xhr;
+       function makeRequest(){
+          xhr=new XMLHttpRequest();
+          xhr.onreadystatechange=processData; 
+          xhr.open("GET","http://localhost:8080/api/rest/person/103",true);
+          xhr.send(null);
+       }
+
+
+       function processData(){
+        if(xhr.readyState==4 && xhr.status==200){
+            let data=xhr.responseText;
+           let emp=JSON.parse(data);
+           document.getElementById("uid").innerHTML=emp.id;
+           document.getElementById("t1").innerHTML=emp.name;
+           document.getElementById("body").innerHTML=emp.city;
+        }
+       }
+    </script>
+
+
+</body>
+</html>
